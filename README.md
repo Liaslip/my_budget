@@ -4,7 +4,7 @@
 
 ## Открыть приложение
 
-После включения Pages: https://liaslip.github.io/my_budget/
+Приложение: https://liaslip.github.io/my_budget/
 
 Не открывайте index.html двойным щелчком: браузер ограничивает загрузку JavaScript-модулей через file://. Открывайте опубликованный сайт или локальный HTTP-сервер.
 
@@ -24,9 +24,9 @@
 Репозиторий должен быть Public для бесплатного GitHub Pages:
 
 1. Settings → Pages.
-2. Source: Deploy from a branch.
-3. Branch: main, папка /(root) → Save.
-4. Дождитесь завершения публикации и откройте адрес, показанный GitHub.
+2. Source: GitHub Actions.
+3. Процесс публикации уже сохранён в .github/workflows/static.yml. Он запускается при изменениях в main; вручную — Actions → Deploy static content to Pages → Run workflow.
+4. Дождитесь успешного завершения workflow и откройте адрес, показанный GitHub.
 
 index.html лежит в корне репозитория. Все пути относительные, поэтому сайт работает в /my_budget/ и при другом имени репозитория. Сборка и установка пакетов для сайта не нужны. Файл .nojekyll отключает обработку Jekyll.
 
