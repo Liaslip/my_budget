@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="theme-color" content="#f6f5ee">
+  <meta name="description" content="Личный бюджет: план, история, календарь и накопления.">
+  <title>Спокойно — личный бюджет</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#month"><span class="brand-mark">с</span><span>спокойно<small>личный бюджет</small></span></a>
+      <nav aria-label="Разделы бюджета" id="navigation"></nav>
+      <div class="sidebar-bottom"><span class="tiny">ЧУТЬ БОЛЬШЕ ЯСНОСТИ</span><p>Деньги — часть жизни.<br>Пусть с ними будет проще.</p><button class="quiet full" data-action="data">Данные и резервная копия</button></div>
+    </aside>
+    <main>
+      <header class="topbar"><div class="save-status" id="save-status" role="status">Загружаем бюджет…</div><div class="top-actions"><span class="demo-tag" id="mode-tag">₽</span><button class="quiet" data-action="data" aria-label="Управление данными">Данные</button></div></header>
+      <div id="content" aria-live="polite"><div class="loading">Собираем ваш месяц…</div></div>
+      <footer>₽ · Остатки счетов обновляются вручную <span id="footer-mode">· В этом браузере</span></footer>
+    </main>
+  </div>
+  <dialog id="editor" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>
